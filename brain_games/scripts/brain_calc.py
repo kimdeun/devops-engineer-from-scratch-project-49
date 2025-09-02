@@ -1,4 +1,4 @@
-from brain_games.game_logic.brain_even_game_logic import congrats_user, question, start_game, validate_user_answer
+from brain_games.game_logic.brain_calc_game_logic import congrats_user, start_game, validate_user_answer
 
 
 def main():
