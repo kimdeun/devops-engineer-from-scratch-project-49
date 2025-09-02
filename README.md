@@ -21,7 +21,9 @@
 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49)
 
-installation - https://asciinema.org/a/Ai9jpPAlMYGLTBCAf8Y4YTFkU
-launch game - https://asciinema.org/a/F1CfVWYBnkTjNGUfrTKrzgvN9
-won game - https://asciinema.org/a/YNIIXXrmrkwhc79wG9rKL0fJM
-lost game - https://asciinema.org/a/JtqK1bFjQHzX0ahbaPSVbB7po
+- installation - https://asciinema.org/a/Ai9jpPAlMYGLTBCAf8Y4YTFkU
+- brain-even launch game - https://asciinema.org/a/F1CfVWYBnkTjNGUfrTKrzgvN9
+- brain-even won game - https://asciinema.org/a/YNIIXXrmrkwhc79wG9rKL0fJM
+- brain-even lost game - https://asciinema.org/a/JtqK1bFjQHzX0ahbaPSVbB7po
+- brain-calc won game - https://asciinema.org/a/TOgArXeGkBPturU5yphamYQJP
+- brain-calc lost game - https://asciinema.org/a/8gFqaddWhmbMnOD75sG3dwA9N
