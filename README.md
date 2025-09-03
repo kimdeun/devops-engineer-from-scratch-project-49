@@ -29,3 +29,5 @@
 - brain-calc lost game - https://asciinema.org/a/8gFqaddWhmbMnOD75sG3dwA9N
 - brain-gcd won game - https://asciinema.org/a/7d249n38DG8sJIdZCql01im8P
 - brain-gcd lost game - https://asciinema.org/a/EbTt974aKVXsvp1f5V266Z8vX
+- brain-progression won game - https://asciinema.org/a/i24aEtahiC6zijVAcB1GVuqqV
+- brain-progression lost game - https://asciinema.org/a/5jdNqIHFvUKXnAsv3cjan5U12
