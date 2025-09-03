@@ -31,3 +31,5 @@
 - brain-gcd lost game - https://asciinema.org/a/EbTt974aKVXsvp1f5V266Z8vX
 - brain-progression won game - https://asciinema.org/a/i24aEtahiC6zijVAcB1GVuqqV
 - brain-progression lost game - https://asciinema.org/a/5jdNqIHFvUKXnAsv3cjan5U12
+- brain-prime won game - https://asciinema.org/a/JG0emCFUa8gHZ5IjVv7vNVQyc
+- brain-prime lost game - https://asciinema.org/a/VuEACndCuI3unWEHHQ57P9RVe
