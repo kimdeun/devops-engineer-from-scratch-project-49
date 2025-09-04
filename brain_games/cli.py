@@ -8,5 +8,5 @@ def welcome_user():
 
 
 def get_user_answer():
-    answer = prompt.string("Your answer: ")
+    answer = prompt.string("Your answer: \n")
     return answer
