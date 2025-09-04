@@ -83,7 +83,7 @@ def validate_user_answer():
         else:
             print(
                 f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was {get_correct_answer()}\n"
+                f"Correct answer was '{get_correct_answer()}'.\n"
                 f"Let's try again, {name}!"
             )
             correct_answer_count = 0

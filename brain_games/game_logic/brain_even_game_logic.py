@@ -42,7 +42,7 @@ def validate_user_answer():
         else:
             print(
                 f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was {'\'yes\'' if user_answer == 'no' else '\'no\''}\n"
+                f"Correct answer was {'\'yes\'' if user_answer == 'no' else '\'no\''}.\n"
                 f"Let's try again, {name}!"
             )
             correct_answer_count = 0

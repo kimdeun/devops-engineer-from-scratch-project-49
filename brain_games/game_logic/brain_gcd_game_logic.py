@@ -52,7 +52,7 @@ def validate_user_answer():
         else:
             print(
                 f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was {get_grc(first_number, second_number)}\n"
+                f"Correct answer was '{get_grc(first_number, second_number)}'.\n"
                 f"Let's try again, {name}!"
             )
             correct_answer_count = 0
