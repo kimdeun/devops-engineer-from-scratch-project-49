@@ -55,7 +55,9 @@ def validate_user_answer():
                 f"Correct answer was {'\'yes\'' if is_prime() else '\'no\''}.\n"
                 f"Let's try again, {name}!"
             )
-            correct_answer_count = 0
+            break
+    if correct_answer_count == 3:
+        congrats_user()
 
 
 def congrats_user():

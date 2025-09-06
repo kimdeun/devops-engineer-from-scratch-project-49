@@ -50,12 +50,15 @@ def validate_user_answer():
             print("Correct!")
             correct_answer_count += 1
         else:
+            correct_answer = get_grc(first_number, second_number)
             print(
                 f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was '{get_grc(first_number, second_number)}'.\n"
+                f"Correct answer was '{correct_answer}'.\n"
                 f"Let's try again, {name}!"
             )
-            correct_answer_count = 0
+            break
+    if correct_answer_count == 3:
+        congrats_user()
 
 
 def congrats_user():
