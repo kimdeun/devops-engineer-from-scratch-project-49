@@ -1,13 +1,19 @@
 import random
 
 from brain_games.cli import get_user_answer, welcome_user
+from brain_games.constants import (
+    MAX_ATTEMPTS,
+    MAX_RANDOM_NUMBER,
+    MIN_RANDOM_NUMBER,
+)
+from brain_games.steps import congrats_user
 
 name = None
 random_number = None
 
 
 def get_random_number():
-    return random.randint(1, 100)
+    return random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
 
 
 def start_game():
@@ -33,7 +39,7 @@ def is_answer_correct(user_answer):
 
 def validate_user_answer():
     correct_answer_count = 0
-    while correct_answer_count < 3:
+    while correct_answer_count < MAX_ATTEMPTS:
         question()
         user_answer = get_user_answer()
         if is_answer_correct(user_answer):
@@ -46,10 +52,6 @@ def validate_user_answer():
                 f"Correct answer was {correct_answer}.\n"
                 f"Let's try again, {name}!"
             )
-            break   
-    if correct_answer_count == 3:
-        congrats_user()
-
-
-def congrats_user():
-    print(f"Congratulations, {name}!")
+            break
+    if correct_answer_count == MAX_ATTEMPTS:
+        congrats_user(name)

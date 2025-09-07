@@ -1,15 +1,13 @@
 import random
 
 from brain_games.cli import get_user_answer, welcome_user
+from brain_games.constants import MAX_ATTEMPTS
+from brain_games.steps import congrats_user, get_random_number
 
 first_operand = None
 second_operand = None
 operator = None
 name = None
-
-
-def get_random_number():
-    return random.randint(1, 100)
 
 
 def get_random_operator():
@@ -74,7 +72,7 @@ def get_correct_answer():
 
 def validate_user_answer():
     correct_answer_count = 0
-    while correct_answer_count < 3:
+    while correct_answer_count < MAX_ATTEMPTS:
         question()
         user_answer = get_user_answer()
         if is_answer_correct(user_answer):
@@ -87,9 +85,5 @@ def validate_user_answer():
                 f"Let's try again, {name}!"
             )
             break
-    if correct_answer_count == 3:
-        congrats_user()
-
-
-def congrats_user():
-    print(f"Congratulations, {name}!")
+    if correct_answer_count == MAX_ATTEMPTS:
+        congrats_user(name)

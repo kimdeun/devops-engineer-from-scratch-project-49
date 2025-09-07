@@ -1,22 +1,29 @@
 import random
 
 from brain_games.cli import get_user_answer, welcome_user
+from brain_games.constants import (
+    MAX_ATTEMPTS,
+    MAX_INDEX_OF_MISSED_NUMBER,
+    MAX_STEP,
+    MIN_INDEX_OF_MISSED_NUMBER,
+    MIN_STEP,
+    SEQUENCE_MAX_INDEX,
+    SEQUENCE_MIN_INDEX,
+)
+from brain_games.steps import congrats_user, get_random_number
 
 first_number_in_progression = None
 correct_answer = None
 name = None
 
 
-def get_random_number():
-    return random.randint(1, 100)
-
-
 def get_index_of_missed_number():
-    return random.randint(0, 9)
+    return random.randint(MIN_INDEX_OF_MISSED_NUMBER, 
+                          MAX_INDEX_OF_MISSED_NUMBER)
 
 
 def get_step():
-    return random.randint(2, 7)
+    return random.randint(MIN_STEP, MAX_STEP)
 
 
 def start_game():
@@ -35,7 +42,7 @@ def question():
 
     sequence = []
 
-    for i in range(0, 10):
+    for i in range(SEQUENCE_MIN_INDEX, SEQUENCE_MAX_INDEX):
         if index_of_missed_number == i:
             sequence.append("..")
             global correct_answer
@@ -55,7 +62,7 @@ def is_answer_correct(user_answer):
 
 def validate_user_answer():
     correct_answer_count = 0
-    while correct_answer_count < 3:
+    while correct_answer_count < MAX_ATTEMPTS:
         question()
         user_answer = get_user_answer()
         if is_answer_correct(user_answer):
@@ -68,9 +75,5 @@ def validate_user_answer():
                 f"Let's try again, {name}!"
             )
             break
-    if correct_answer_count == 3:
-        congrats_user()
-
-
-def congrats_user():
-    print(f"Congratulations, {name}!")
+    if correct_answer_count == MAX_ATTEMPTS:
+        congrats_user(name)
