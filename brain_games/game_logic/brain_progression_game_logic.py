@@ -35,7 +35,7 @@ def question():
 
     sequence = []
 
-    for i in range(0, 9):
+    for i in range(0, 10):
         if index_of_missed_number == i:
             sequence.append("..")
             global correct_answer
