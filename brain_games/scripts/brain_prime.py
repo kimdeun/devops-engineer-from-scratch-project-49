@@ -1,4 +1,4 @@
-from brain_games.game_logic.brain_prime_game_logic import (
+from brain_games.game_logic.brain_prime import (
     start_game,
     validate_user_answer,
 )
