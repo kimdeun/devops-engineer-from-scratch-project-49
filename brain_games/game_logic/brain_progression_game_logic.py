@@ -47,10 +47,10 @@ def question():
 
 
 def is_answer_correct(user_answer):
-    if isinstance(user_answer, int):
-        return int(user_answer) == correct_answer
-    else:
+    if not user_answer.isdigit():
         return False
+    else:
+        return int(user_answer) == correct_answer
 
 
 def validate_user_answer():
