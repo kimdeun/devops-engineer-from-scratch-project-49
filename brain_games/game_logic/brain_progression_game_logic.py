@@ -47,7 +47,10 @@ def question():
 
 
 def is_answer_correct(user_answer):
-    return int(user_answer) == correct_answer
+    if isinstance(user_answer, int):
+        return int(user_answer) == correct_answer
+    else:
+        return False
 
 
 def validate_user_answer():
