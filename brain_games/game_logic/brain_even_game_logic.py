@@ -46,7 +46,7 @@ def validate_user_answer():
                 f"Correct answer was {correct_answer}.\n"
                 f"Let's try again, {name}!"
             )
-        break
+            break   
     if correct_answer_count == 3:
         congrats_user()
 
