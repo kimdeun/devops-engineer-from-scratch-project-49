@@ -10,11 +10,7 @@ from brain_games.constants import (
     SEQUENCE_MAX_INDEX,
     SEQUENCE_MIN_INDEX,
 )
-from brain_games.steps import congrats_user, get_random_number
-
-first_number_in_progression = None
-correct_answer = None
-name = None
+from brain_games.utils import congrats_user, get_random_number
 
 
 def get_index_of_missed_number():
@@ -27,13 +23,12 @@ def get_step():
 
 
 def start_game():
-    global name
     name = welcome_user()
     print("What number is missing in the progression?")
+    return name
 
 
 def question():
-    global first_number_in_progression
     first_number = get_random_number()
 
     index_of_missed_number = get_index_of_missed_number()
@@ -42,28 +37,30 @@ def question():
 
     sequence = []
 
+    correct_answer = None
+
     for i in range(SEQUENCE_MIN_INDEX, SEQUENCE_MAX_INDEX):
         if index_of_missed_number == i:
             sequence.append("..")
-            global correct_answer
             correct_answer = first_number + i * step
         else:
             sequence.append(first_number + i * step)
 
     print(f"Question: {' '.join(map(str, sequence))}")
+    return correct_answer
 
 
-def is_answer_correct(user_answer):
+def is_answer_correct(user_answer, correct_answer):
     if not user_answer.isdigit():
         return False
     else:
         return int(user_answer) == correct_answer
 
 
-def validate_user_answer():
+def validate_user_answer(name):
     correct_answer_count = 0
     while correct_answer_count < MAX_ATTEMPTS:
-        question()
+        correct_answer = question()
         user_answer = get_user_answer()
         if is_answer_correct(user_answer):
             print("Correct!")

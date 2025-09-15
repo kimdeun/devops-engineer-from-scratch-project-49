@@ -6,8 +6,7 @@ from brain_games.game_logic.brain_even import (
 
 def main():
     print("Welcome to the Brain Games!")
-    start_game()
-    validate_user_answer()
+    validate_user_answer(start_game())
 
 
 if __name__ == "__main__":

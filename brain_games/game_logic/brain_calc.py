@@ -2,12 +2,7 @@ import random
 
 from brain_games.cli import get_user_answer, welcome_user
 from brain_games.constants import MAX_ATTEMPTS
-from brain_games.steps import congrats_user, get_random_number
-
-first_operand = None
-second_operand = None
-operator = None
-name = None
+from brain_games.utils import congrats_user, get_random_number
 
 
 def get_random_operator():
@@ -16,49 +11,19 @@ def get_random_operator():
 
 
 def start_game():
-    global name
     name = welcome_user()
     print("What is the result of the expression?")
-
+    return name
 
 def question():
-    global first_operand
     first_operand = get_random_number()
-
-    global second_operand
     second_operand = get_random_number()
-
-    global operator
     operator = get_random_operator()
 
     print(f"Question: {first_operand} {operator} {second_operand}")
+    return first_operand, second_operand, operator
 
-
-def is_answer_correct(user_answer):
-    match operator:
-        case "+":
-            return (
-                True
-                if first_operand + second_operand == int(user_answer)
-                else False
-            )
-        case "-":
-            return (
-                True
-                if first_operand - second_operand == int(user_answer)
-                else False
-            )
-        case "*":
-            return (
-                True
-                if first_operand * second_operand == int(user_answer)
-                else False
-            )
-        case _:
-            print("Некорректно выбран оператор")
-
-
-def get_correct_answer():
+def calculate(first_operand, second_operand, operator):
     match operator:
         case "+":
             return first_operand + second_operand
@@ -69,19 +34,47 @@ def get_correct_answer():
         case _:
             print("Некорректно выбран оператор")
 
+def is_answer_correct(user_answer, first_operand, second_operand, operator):
+    match operator:
+        case "+":
+            return (
+                True
+                if calculate(first_operand, second_operand, operator) == int(user_answer)
+                else False
+            )
+        case "-":
+            return (
+                True
+                if calculate(first_operand, second_operand, operator) == int(user_answer)
+                else False
+            )
+        case "*":
+            return (
+                True
+                if calculate(first_operand, second_operand, operator) == int(user_answer)
+                else False
+            )
+        case _:
+            print("Некорректно выбран оператор")
 
-def validate_user_answer():
+
+def get_correct_answer(first_operand, second_operand, operator):
+    return calculate(first_operand, second_operand, operator)
+
+
+def validate_user_answer(name):
     correct_answer_count = 0
     while correct_answer_count < MAX_ATTEMPTS:
-        question()
+        first_operand, second_operand, operator = question()
         user_answer = get_user_answer()
-        if is_answer_correct(user_answer):
+        if is_answer_correct(user_answer, first_operand, second_operand, operator):
             print("Correct!")
             correct_answer_count += 1
         else:
+            correct_answer = get_correct_answer(first_operand, second_operand, operator)
             print(
                 f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was '{get_correct_answer()}'.\n"
+                f"Correct answer was '{correct_answer}'.\n"
                 f"Let's try again, {name}!"
             )
             break
