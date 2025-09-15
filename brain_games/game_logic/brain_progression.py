@@ -63,7 +63,7 @@ def validate_user_answer(name):
     while correct_answer_count < MAX_ATTEMPTS:
         correct_answer = question()
         user_answer = get_user_answer()
-        if is_answer_correct(user_answer):
+        if is_answer_correct(user_answer, correct_answer):
             print("Correct!")
             correct_answer_count += 1
         else:

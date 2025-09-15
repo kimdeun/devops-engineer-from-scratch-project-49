@@ -2,10 +2,6 @@ from brain_games.cli import get_user_answer, welcome_user
 from brain_games.constants import MAX_ATTEMPTS
 from brain_games.utils import congrats_user, get_random_number
 
-# first_number = None
-# second_number = None
-# name = None
-
 
 def start_game():
     name = welcome_user()
@@ -40,7 +36,7 @@ def validate_user_answer(name):
     while correct_answer_count < MAX_ATTEMPTS:
         first_number, second_number = question()
         user_answer = get_user_answer()
-        if is_answer_correct(user_answer):
+        if is_answer_correct(user_answer, first_number, second_number):
             print("Correct!")
             correct_answer_count += 1
         else:
