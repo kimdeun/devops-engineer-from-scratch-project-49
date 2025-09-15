@@ -4,6 +4,7 @@ from brain_games.cli import get_user_answer, welcome_user
 from brain_games.constants import MAX_ATTEMPTS
 from brain_games.utils import congrats_user, get_random_number
 
+
 def start_game():
     name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
@@ -43,10 +44,10 @@ def validate_user_answer(name):
             print("Correct!")
             correct_answer_count += 1
         else:
-            is_prime = is_prime(random_number)
+            prime = is_prime(random_number)
             print(
                 f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was {'\'yes\'' if is_prime else '\'no\''}.\n"
+                f"Correct answer was {"'yes'" if prime else "'no'"}.\n"
                 f"Let's try again, {name}!"
             )
             break

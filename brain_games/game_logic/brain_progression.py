@@ -14,8 +14,9 @@ from brain_games.utils import congrats_user, get_random_number
 
 
 def get_index_of_missed_number():
-    return random.randint(MIN_INDEX_OF_MISSED_NUMBER, 
-                          MAX_INDEX_OF_MISSED_NUMBER)
+    return random.randint(
+        MIN_INDEX_OF_MISSED_NUMBER, MAX_INDEX_OF_MISSED_NUMBER
+    )
 
 
 def get_step():

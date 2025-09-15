@@ -15,6 +15,7 @@ def start_game():
     print("What is the result of the expression?")
     return name
 
+
 def question():
     first_operand = get_random_number()
     second_operand = get_random_number()
@@ -22,6 +23,7 @@ def question():
 
     print(f"Question: {first_operand} {operator} {second_operand}")
     return first_operand, second_operand, operator
+
 
 def calculate(first_operand, second_operand, operator):
     match operator:
@@ -34,24 +36,28 @@ def calculate(first_operand, second_operand, operator):
         case _:
             print("Некорректно выбран оператор")
 
+
 def is_answer_correct(user_answer, first_operand, second_operand, operator):
     match operator:
         case "+":
             return (
                 True
-                if calculate(first_operand, second_operand, operator) == int(user_answer)
+                if calculate(first_operand, second_operand, operator)
+                == int(user_answer)
                 else False
             )
         case "-":
             return (
                 True
-                if calculate(first_operand, second_operand, operator) == int(user_answer)
+                if calculate(first_operand, second_operand, operator)
+                == int(user_answer)
                 else False
             )
         case "*":
             return (
                 True
-                if calculate(first_operand, second_operand, operator) == int(user_answer)
+                if calculate(first_operand, second_operand, operator)
+                == int(user_answer)
                 else False
             )
         case _:
@@ -67,11 +73,15 @@ def validate_user_answer(name):
     while correct_answer_count < MAX_ATTEMPTS:
         first_operand, second_operand, operator = question()
         user_answer = get_user_answer()
-        if is_answer_correct(user_answer, first_operand, second_operand, operator):
+        if is_answer_correct(
+            user_answer, first_operand, second_operand, operator
+        ):
             print("Correct!")
             correct_answer_count += 1
         else:
-            correct_answer = get_correct_answer(first_operand, second_operand, operator)
+            correct_answer = get_correct_answer(
+                first_operand, second_operand, operator
+            )
             print(
                 f"'{user_answer}' is wrong answer ;(. "
                 f"Correct answer was '{correct_answer}'.\n"
