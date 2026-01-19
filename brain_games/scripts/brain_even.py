@@ -1,12 +1,10 @@
-from brain_games.game_logic.brain_even import (
-    start_game,
-    validate_user_answer,
-)
+from brain_games.game_engine import run_game
+from brain_games.game_logic.brain_even import get_question_and_answer, task
 
 
 def main():
     print("Welcome to the Brain Games!")
-    validate_user_answer(start_game())
+    run_game(task(), get_question_and_answer)
 
 
 if __name__ == "__main__":

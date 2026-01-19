@@ -1,23 +1,11 @@
-from brain_games.cli import get_user_answer, welcome_user
-from brain_games.constants import MAX_ATTEMPTS
-from brain_games.utils import congrats_user, get_random_number
+from brain_games.utils import get_random_number
 
 
-def start_game():
-    name = welcome_user()
-    print("Find the greatest common divisor of given numbers.")
-    return name
+def task():
+    return "Find the greatest common divisor of given numbers."
 
 
-def question():
-    first_number = get_random_number()
-    second_number = get_random_number()
-
-    print(f"Question: {first_number} {second_number}")
-    return first_number, second_number
-
-
-def get_grc(first_num, second_num):
+def get_gcd(first_num, second_num):
     a = int(first_num)
     b = int(second_num)
 
@@ -27,25 +15,11 @@ def get_grc(first_num, second_num):
     return a
 
 
-def is_answer_correct(user_answer, first_number, second_number):
-    return int(user_answer) == get_grc(first_number, second_number)
+def get_question_and_answer():
+    first_number = get_random_number()
+    second_number = get_random_number()
 
+    question = f"{first_number} {second_number}"
+    correct_answer = get_gcd(first_number, second_number)
 
-def validate_user_answer(name):
-    correct_answer_count = 0
-    while correct_answer_count < MAX_ATTEMPTS:
-        first_number, second_number = question()
-        user_answer = get_user_answer()
-        if is_answer_correct(user_answer, first_number, second_number):
-            print("Correct!")
-            correct_answer_count += 1
-        else:
-            correct_answer = get_grc(first_number, second_number)
-            print(
-                f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was '{correct_answer}'.\n"
-                f"Let's try again, {name}!"
-            )
-            break
-    if correct_answer_count == MAX_ATTEMPTS:
-        congrats_user(name)
+    return question, correct_answer
