@@ -1,8 +1,7 @@
 from brain_games.utils import get_random_number
 
 
-def task():
-    return 'Answer "yes" if the number is even, otherwise answer "no".'
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_question_and_answer():

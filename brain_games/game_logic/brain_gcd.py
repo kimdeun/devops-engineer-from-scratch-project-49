@@ -1,8 +1,7 @@
 from brain_games.utils import get_random_number
 
 
-def task():
-    return "Find the greatest common divisor of given numbers."
+TASK = "Find the greatest common divisor of given numbers."
 
 
 def get_gcd(first_num, second_num):

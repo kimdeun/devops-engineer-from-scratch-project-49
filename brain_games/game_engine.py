@@ -4,6 +4,7 @@ from brain_games.utils import congrats_user
 
 
 def run_game(task, get_question_and_answer):
+    print("Welcome to the Brain Games!")
     name = welcome_user()
     print(task)
 

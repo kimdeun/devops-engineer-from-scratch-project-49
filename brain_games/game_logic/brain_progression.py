@@ -11,24 +11,15 @@ from brain_games.constants import (
 from brain_games.utils import get_random_number
 
 
-def task():
-    return "What number is missing in the progression?"
-
-
-def get_index_of_missed_number():
-    return random.randint(
-        MIN_INDEX_OF_MISSED_NUMBER, MAX_INDEX_OF_MISSED_NUMBER
-    )
-
-
-def get_step():
-    return random.randint(MIN_STEP, MAX_STEP)
+TASK = "What number is missing in the progression?"
 
 
 def get_question_and_answer():
     first_number = get_random_number()
-    index_of_missed_number = get_index_of_missed_number()
-    step = get_step()
+    index_of_missed_number = random.randint(
+        MIN_INDEX_OF_MISSED_NUMBER, MAX_INDEX_OF_MISSED_NUMBER
+    )
+    step = random.randint(MIN_STEP, MAX_STEP)
 
     sequence = []
     correct_answer = None

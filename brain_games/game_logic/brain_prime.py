@@ -4,8 +4,7 @@ from brain_games.constants import MIN_PRIME_NUMBER, PRIME_CHECK_START
 from brain_games.utils import get_random_number
 
 
-def task():
-    return 'Answer "yes" if given number is prime. Otherwise answer "no".'
+TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(random_number):
