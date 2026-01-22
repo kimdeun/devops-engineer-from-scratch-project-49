@@ -1,5 +1,27 @@
 # Brain Games
 
+## Статус проекта
+
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/kimdeun/devops-engineer-from-scratch-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kimdeun/devops-engineer-from-scratch-project-49/actions)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49)
+
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
+)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
+)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
+)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
+)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
+)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
+)
+
 Набор математических игр для тренировки мозга. Проект включает в себя пять различных игр, каждая из которых проверяет различные математические навыки.
 
 ### Доступные игры:
@@ -209,7 +231,7 @@ brain_games/
 ## Демонстрация
 
 
-[![asciicast](https://asciinema.org/a/Ai9jpPAlMYGLTBCAf8Y4YTFkU.svg)](https://asciinema.org/a/Ai9jpPAlMYGLTBCAf8Y4YTFkU)
+<script src="https://asciinema.org/a/Ai9jpPAlMYGLTBCAf8Y4YTFkU.js" id="asciicast-Ai9jpPAlMYGLTBCAf8Y4YTFkU" async="true"></script>
 [![asciicast](https://asciinema.org/a/F1CfVWYBnkTjNGUfrTKrzgvN9.svg)](https://asciinema.org/a/F1CfVWYBnkTjNGUfrTKrzgvN9)
 [![asciicast](https://asciinema.org/a/YNIIXXrmrkwhc79wG9rKL0fJM.svg)](https://asciinema.org/a/YNIIXXrmrkwhc79wG9rKL0fJM)
 [![asciicast](https://asciinema.org/a/JtqK1bFjQHzX0ahbaPSVbB7po.svg)](https://asciinema.org/a/JtqK1bFjQHzX0ahbaPSVbB7po)
@@ -221,25 +243,3 @@ brain_games/
 [![asciicast](https://asciinema.org/a/5jdNqIHFvUKXnAsv3cjan5U12.svg)](https://asciinema.org/a/5jdNqIHFvUKXnAsv3cjan5U12)
 [![asciicast](https://asciinema.org/a/JG0emCFUa8gHZ5IjVv7vNVQyc.svg)](https://asciinema.org/a/JG0emCFUa8gHZ5IjVv7vNVQyc)
 [![asciicast](https://asciinema.org/a/VuEACndCuI3unWEHHQ57P9RVe.svg)](https://asciinema.org/a/VuEACndCuI3unWEHHQ57P9RVe)
-
-## Статус проекта
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/kimdeun/devops-engineer-from-scratch-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kimdeun/devops-engineer-from-scratch-project-49/actions)
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49)
-
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49)
-
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
-)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
-)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
-)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
-)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
-)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=kimdeun_devops-engineer-from-scratch-project-49&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=kimdeun_devops-engineer-from-scratch-project-49))
-)
